@@ -97,6 +97,10 @@ header{
   margin-top: 100px;
 }
 
+#startbtn{
+  margin-top: 100px;
+}
+
 .container1 img {
   margin-right: 10px; /* Espaçamento entre as imagens do container1 */
 }
