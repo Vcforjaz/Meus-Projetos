@@ -75,21 +75,26 @@ header{
 }
 
 .container {
-
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 50px; /* Espaçamento altura entre as imagens */
+  gap: 100px; /* Espaçamento altura entre as imagens */
+  justify-content: center;   
+  position: relative;
 }
 
 .container img {
   width: 200px; /* tamanho largura conforme necessário */
-  height: auto; /* Mantém a proporção da imagem */
+  height: 200px; /* Mantém a proporção da imagem */
 }
 
 .container1 {
   display: flex;
   position: relative;
+}
+
+#content{
+  margin-top: 100px;
 }
 
 .container1 img {
