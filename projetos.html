@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
     <div class="background">
        
         <header>
@@ -37,27 +36,74 @@
             </div><!--cabeçalho-link-->
         </header>
 
-        <div class="container">
-                <div class="container1">
-                    <img src="./images/desktop.png" alt="Imagem 1 Container 1">
-                    <img src="./images/mobile.png" alt="Imagem 2 Container 1">
-                  </div>
-              
-                  <div class="container2">
-                    <img src="./images/mult.png" alt="Imagem 1 Container 2">
-                    <img src="./images/web.png" alt="Imagem 2 Container 2">
-                  </div>
-
-
-               
-               
-        </div><!--container-text-->
         
-    </div><!--background-->
+        <button style="display: none;" id="startbtn" onclick="showContent()">Para voltar clique aqui</button>
+
+        <!-- CONTROLE DOS CONTAINERS -->
+        <div id="content">
+            <div class="container">
+                <div class="container1">
+                    <img id="imgdesktop" src="./images/desktop.png" alt="Imagem 1 Container 1" onclick="showTextAndHideContent('desktop')">
+                    <p id="desktop" style="display: none;">TEXTO DESKTOP</p>
+                    <img id="imgmobile" src="./images/mobile.png" alt="Imagem 2 Container 1" onclick="showTextAndHideContent('mobile')">
+                    <p id="mobile" style="display: none;">TEXTO MOBILE</p>
+                </div>
+    
+                <div class="container2">
+                    <img id="imgmult" src="./images/mult.png" alt="Imagem 1 Container 2" onclick="showTextAndHideContent('mult')">
+                    <p id="mult" style="display: none;">TEXTO MULT</p>
+                    <img id="imgweb" src="./images/web.png" alt="Imagem 2 Container 2" onclick="showTextAndHideContent('web')">
+                    <p id="web" style="display: none;">TEXTO WEB</p>
+                </div>
+            </div>
+        </div>
+    
+<script>function showTextAndHideContent(textId) {
+    var content = document.getElementById("content");
+    content.style.display = "";
+
+    // Oculta todas as imagens
+    var images = document.querySelectorAll('#content img');
+    images.forEach(function (image) {
+        image.style.display = "none";
+    });
+
+    // Exibe o parágrafo associado à imagem clicada
+    var textElement = document.getElementById(textId);
+    textElement.style.display = "";
+
+    var startbtn = document.getElementById("startbtn");
+    startbtn.style.display = "block";
+}
+
+function showContent() {
+    var content = document.getElementById("content");
+    content.style.display = "block";
+
+    var startbtn = document.getElementById("startbtn");
+    startbtn.style.display = "none";
+
+    // Exibe todas as imagens novamente
+    var images = document.querySelectorAll('#content img');
+    images.forEach(function (image) {
+        image.style.display = "";
+    });
+
+    // Oculta todos os parágrafos ao mostrar o conteúdo novamente
+    var paragraphs = document.querySelectorAll('#content p');
+    paragraphs.forEach(function (paragraph) {
+        paragraph.style.display = "none";
+    });
+}
+</script>
+    
+
+               
 
 
 
-    <script type="script.js"></script>    
+
+    <script type="script.js"></script>   
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </body>
