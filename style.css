@@ -99,6 +99,8 @@ header{
 
 #startbtn{
   margin-top: 100px;
+   width: 50px; /* tamanho largura conforme necessário */
+  height: 50px; /* Mantém a proporção da imagem */
   align-items: center;
   display: flex;
   flex-direction: column;
