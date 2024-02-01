@@ -27,7 +27,7 @@ function pausarFaixa() {
 function tocarOuPausarFaixa() {
   if (taTocando === true) {
     pausarFaixa();
-    status.innerText = "Pausado";
+    txtstatus.innerText = "Pausado";
   } else {
     tocarFaixa();
     txtstatus.innerText = "Reproduzindo";
