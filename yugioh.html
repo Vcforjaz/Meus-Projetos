@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- reset -->
+    <link rel="stylesheet" href="./projetosDIO/yugioh-Game/src/styles/reset.css">
+    <!-- Framework -->
+    <link rel="stylesheet" href="./projetosDIO/yugioh-Game/src/styles/buttons.css">
+    <link rel="stylesheet" href="./projetosDIO/yugioh-Game/src/styles/containers_and_frames.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./projetosDIO/yugioh-Game/src/styles/main.css">
+
+    <title>Yu-Gi-Oh Jo-ken-Po Edition</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./projetosDIO/yugioh-Game/src/assets/favicon/Favicon.ico" type="image/x-icon">
+</head>
+
+
+<body>
+                <!-- ISSO PRECISA FICAR NO TOPO PARA EXIBIR O BOTAO --->
+                <!-- CASO CONTRARIO NAO HAVERA MUSICA EM CERTOS BROWSERS -->
+<button id="startbtn">Clique aqui para começar</button>
+
+<!-- AQUI FICA O CONTEUDO ORIGINAL DA PAGINA -->
+<div id="content" style="display: none;">
+
+    <audio id="musicOLD" loop>
+        <source src="./projetosDIO/yugioh-Game/src/assets/audios/egyptian_duel.mp3" type="audio/mp3" />
+         </audio>
+        <div class="bg-video"><video class="video" autoplay loop muted><source src="./projetosDIO/yugioh-Game/src/assets/video/yugi.mp4" type="video/mp4"/></video></div>
+        
+        <div class="container">
+            
+        <div class="container__left framed-golden-2">
+        
+        <div class="score_box frame"><span id="score_points">Win: 0 | Loose: 0</span></div>
+        
+        <div class="menu_avatar"><img id="card-image"></div>
+        <div class="card_details frame"><p id="card-name">Selecione</p><p id="card-type">uma carta</p></div>
+            </div>
+                                                        <!-- CONTAINER RIGHT -->
+            <div class="container__right">
+                <div class="card-box__container">
+        
+                    <!-- Cars Boxes do container -->
+            <div class="card-box framed" id="computer-cards"></div>
+        
+            <div class="card-versus__container"> <!-- DIV ESTA ABERTA!-->
+        
+        
+        
+            <div class="versus-top">
+                <div class="card-infield">
+                    <img id="player-field-card" height="180px" width="125px">
+            <!-- imagem de separação de cartas -->
+            </div><img height="100px" src="./projetosDIO/yugioh-Game/src/assets/icons/millenium2.png">
+            <!-- Segunda card -->
+            <div class="card-infield">
+                <img id="computer-field-card" height="180px" width="125px">
+        </div>
+        </div><div class="versus-bottom">
+            <button id="next-duel" class="rpgui-button"
+            onclick="resetduel()">GANHOU</button>
+            </div> <!--fechou DIV card-versus-->
+        
+                      
+        </div>    
+        <div class="card-box framed" id="player-cards"></div>
+        
+        <!-- -->
+                     
+        
+        </div>
+        
+        
+        </div>
+                    <!-- FIM VERSUS TOP -->
+        
+        
+                </div>
+        
+        
+            <script src="./projetosDIO/yugioh-Game/src/scripts/engine.js" defer></script>
+
+</div>
+
+
+<!-- UALÁ, MÁGICA de JS -->
+<audio id="bgm" src="./projetosDIO/yugioh-Game/src/assets/audios/egyptian_duel.mp3" style="display: none;" loop></audio>
+<!-- FIM DO START BUTTON -->
+<!--MUSIC-->
+
+</body>
+
+
+</html>
