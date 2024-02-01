@@ -6,7 +6,7 @@ let mapedKeys = [];
 let audio = new Audio("https://vcforjaz.github.io/Meus-Projetos/projetosDIO/simulador-de-piano/src/tunes/a.wav");
 
 const playTune = (key) => {
-  audio.src = `https://vcforjaz.github.io/Meus-Projetos/projetosDIO/simulador-de-piano/src/tunes${key}.wav`;
+  audio.src = `https://vcforjaz.github.io/Meus-Projetos/projetosDIO/simulador-de-piano/src/tunes/${key}.wav`;
   audio.play();
 
   const clickedKey = document.querySelector(`[data-key="${key}"]`);
