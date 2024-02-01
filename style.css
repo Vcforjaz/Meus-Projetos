@@ -99,10 +99,11 @@ header{
 
 #startbtn{
   margin-top: 100px;
+    width: 250px;
+  height: 250px;
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 100px; /* Espaçamento altura entre as imagens */
   justify-content: center;   
   position: relative;
 }
