@@ -1,4 +1,4 @@
-const state = {
+   const state = {
   view: {
     squares: document.querySelectorAll(".square"),
     enemy: document.querySelector(".enemy"),
@@ -32,7 +32,7 @@ o jogo */
 }
 
 function playSound(audioName) {
-  let audio = new Audio(`./src/audios/${audioName}.m4a`);
+  let audio = new Audio(`./projetosDIO/detona-ralph/src/audios/${audioName}.m4a`);
   audio.volume = 0.2;
   audio.play();
 }
