@@ -155,7 +155,7 @@ init ();
 }
 
 async function playAudio(status) {
-const audio = new Audio(`./projetosDIO/yugioh-Game/src/assets/audios/${status}.wav`)
+const audio = new Audio(`./projetosDIO/yugioh-Game/src/assets/audios/${status}.wav`);
 
 audio.play();
 }
