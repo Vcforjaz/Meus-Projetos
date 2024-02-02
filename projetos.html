@@ -39,70 +39,87 @@
         
         
 
-        <!-- CONTROLE DOS CONTAINERS -->
-        <div id="content">
-                                
-            <div class="container">
-                <button style="display: none;" id="startbtn" onclick="showContent()"><b>Para voltar clique aqui</b></button>
-                <div class="container1">
+     <!-- CONTROLE DOS CONTAINERS -->
+<div id="content">
 
-                    <img id="imgdesktop" src="./images/desktop.png" alt="Imagem 1 Container 1" onclick="showTextAndHideContent('desktop')">
-                    <h2><b><p id="desktop" style="display: none;">Projetos ainda em construção (Desktop)</p></h2></b>
-                    <img id="imgmobile" src="./images/mobile.png" alt="Imagem 2 Container 1" onclick="showTextAndHideContent('mobile')">
-                    <h2><b><p id="mobile" style="display: none;">Projetos ainda em construção (Mobile)</p></h2></b>
-                </div>
-    
-                <div class="container2">
-                    <img id="imgmult" src="./images/mult.png" alt="Imagem 1 Container 2" onclick="showTextAndHideContent('mult')">
-                    <p id="mult" style="display: none;">Projetos ainda em construção (Mult)</p>
-                    <img id="imgweb" src="./images/web.png" alt="Imagem 2 Container 2" onclick="showTextAndHideContent('web')">
-                    <p id="web" style="display: none;">
-                        <li><a href="index.html "><b><h2>Yugioh - JS</a></li></h2></b></a></li>
-                        <li><a href="index.html "><b><h2>Detona Ralph - JS,CSS,HTML</h2></b></a></li>
-                        <li><a href="index.html "><b><h2>Simulador de Piano - JS,CSS,HTML</h2></b></a></li>
-                        <li><a href="index.html "><b><h2>Jogo da memória - JS,CSS,HTML</h2></b></a></li>
-                        <li></li><a href="index.html "><b><h2>Audiobook Dom Casmurro - JS,CSS,HTML</h2></b></a></li></p>
-                </div>
+    <div class="container">
+        <button style="display: none;" id="startbtn" onclick="showContent()"><b>Para voltar clique aqui</b></button>
+        <div class="container1">
+
+            <img id="imgdesktop" src="./images/desktop.png" alt="Imagem 1 Container 1" onclick="showTextAndHideContent('desktop')">
+            <!-- LISTA DESKTOP -->
+            <div class="desktop" style="display: none;">
+                <li><a href="">Projetos ainda em construção (Desktop)</a></li>
             </div>
+
+            <img id="imgmobile" src="./images/mobile.png" alt="Imagem 2 Container 1" onclick="showTextAndHideContent('mobile')">
+            <!-- LISTA MOBILE -->
+            <div class="mobile" style="display: none;">
+                <li><a href="">Projetos ainda em construção (Mobile)</a></li>
+            </div>
+
         </div>
-    
-<script>function showTextAndHideContent(textId) {
-    var content = document.getElementById("content");
-    content.style.display = "";
 
-    // Oculta todas as imagens
-    var images = document.querySelectorAll('#content img');
-    images.forEach(function (image) {
-        image.style.display = "none";
-    });
+        <div class="container2">
+            <img id="imgmult" src="./images/mult.png" alt="Imagem 1 Container 2" onclick="showTextAndHideContent('mult')">
 
-    // Exibe o parágrafo associado à imagem clicada
-    var textElement = document.getElementById(textId);
-    textElement.style.display = "";
+            <!-- LISTA MULT -->
+            <div class="mult" style="display: none;">
+                <li><a href="">Projetos ainda em construção (Mult)</a></li>
+            </div>
 
-    var startbtn = document.getElementById("startbtn");
-    startbtn.style.display = "block";
-}
+            <img id="imgweb" src="./images/web.png" alt="Imagem 2 Container 2" onclick="showTextAndHideContent('web')">
+            <!-- LISTA WEB -->
+            <div class="web" style="display: none;">
+                <li><a href="index.html"><b><h2>Yugioh - JS</h2></b></a></li>
+                <li><a href="index.html"><b><h2>Detona Ralph - JS,CSS,HTML</h2></b></a></li>
+                <li><a href="index.html"><b><h2>Simulador de Piano - JS,CSS,HTML</h2></b></a></li>
+                <li><a href="index.html"><b><h2>Jogo da memória - JS,CSS,HTML</h2></b></a></li>
+                <li><a href="index.html"><b><h2>Audiobook Dom Casmurro - JS,CSS,HTML</h2></b></a></li>
+            </div>
 
-function showContent() {
-    var content = document.getElementById("content");
-    content.style.display = "block";
+        </div>
+    </div>
+</div>
 
-    var startbtn = document.getElementById("startbtn");
-    startbtn.style.display = "none";
+<script>
+    function showTextAndHideContent(textId) {
+        var content = document.getElementById("content");
+        content.style.display = "";
 
-    // Exibe todas as imagens novamente
-    var images = document.querySelectorAll('#content img');
-    images.forEach(function (image) {
-        image.style.display = "";
-    });
+        // Oculta todas as imagens
+        var images = document.querySelectorAll('#content img');
+        images.forEach(function (image) {
+            image.style.display = "none";
+        });
 
-    // Oculta todos os parágrafos ao mostrar o conteúdo novamente
-    var paragraphs = document.querySelectorAll('#content p');
-    paragraphs.forEach(function (paragraph) {
-        paragraph.style.display = "none";
-    });
-}
+        // Exibe a div associada à imagem clicada
+        var textElement = document.querySelector('#content .' + textId);
+        textElement.style.display = "";
+
+        var startbtn = document.getElementById("startbtn");
+        startbtn.style.display = "block";
+    }
+
+    function showContent() {
+        var content = document.getElementById("content");
+        content.style.display = "block";
+
+        var startbtn = document.getElementById("startbtn");
+        startbtn.style.display = "none";
+
+        // Exibe todas as imagens novamente
+        var images = document.querySelectorAll('#content img');
+        images.forEach(function (image) {
+            image.style.display = "";
+        });
+
+        // Oculta todas as divs ao mostrar o conteúdo novamente
+        var divs = document.querySelectorAll('#content div');
+        divs.forEach(function (div) {
+            div.style.display = "none";
+        });
+    }
 </script>
     
 
