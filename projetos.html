@@ -101,25 +101,25 @@
         startbtn.style.display = "block";
     }
 
-    function showContent() {
-        var content = document.getElementById("content");
-        content.style.display = "block";
+function showContent() {
+    var content = document.getElementById("content");
+    content.style.display = "block";
 
-        var startbtn = document.getElementById("startbtn");
-        startbtn.style.display = "none";
+    var startbtn = document.getElementById("startbtn");
+    startbtn.style.display = "none";
 
-        // Exibe todas as imagens novamente
-        var images = document.querySelectorAll('#content img');
-        images.forEach(function (image) {
-            image.style.display = "";
-        });
+    // Exibe todas as imagens novamente
+    var images = document.querySelectorAll('#content img');
+    images.forEach(function (image) {
+        image.style.display = "block"; // Alterado para "block" para exibir as imagens
+    });
 
-        // Oculta todas as divs ao mostrar o conteúdo novamente
-        var divs = document.querySelectorAll('#content div');
-        divs.forEach(function (div) {
-            div.style.display = "none";
-        });
-    }
+    // Oculta todas as divs ao mostrar o conteúdo novamente
+    var divs = document.querySelectorAll('#content div');
+    divs.forEach(function (div) {
+        div.style.display = "none";
+    });
+}
 </script>
     
 
