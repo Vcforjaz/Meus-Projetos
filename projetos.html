@@ -48,14 +48,14 @@
 
             <img id="imgdesktop" src="./images/desktop.png" alt="Imagem 1 Container 1" onclick="showTextAndHideContent('desktop')">
             <!-- LISTA DESKTOP -->
-            <div class="desktop" style="display: none;">
-                <li><a href="">Projetos ainda em construção (Desktop)</a></li>
+            <div class="desktop projects" style="display: none;">
+                <li><a id="desktop1" href=""><b><h2>•Projetos ainda em construção (Desktop)</h2></b></a></li>
             </div>
 
             <img id="imgmobile" src="./images/mobile.png" alt="Imagem 2 Container 1" onclick="showTextAndHideContent('mobile')">
             <!-- LISTA MOBILE -->
-            <div class="mobile" style="display: none;">
-                <li><a href="">Projetos ainda em construção (Mobile)</a></li>
+            <div class="mobile projects" style="display: none;">
+                <li><a id="mobile1" href=""><b><h2>•Projetos ainda em construção (Mobile)</h2></b></a></li>
             </div>
 
         </div>
@@ -64,24 +64,25 @@
             <img id="imgmult" src="./images/mult.png" alt="Imagem 1 Container 2" onclick="showTextAndHideContent('mult')">
 
             <!-- LISTA MULT -->
-            <div class="mult" style="display: none;">
-                <li><a href="">Projetos ainda em construção (Mult)</a></li>
+            <div class="mult projects" style="display: none;">
+                <li><a id="mult1" href=""><b><h2>•Projetos ainda em construção (Mult)</h2></b></a></li>
             </div>
 
             <img id="imgweb" src="./images/web.png" alt="Imagem 2 Container 2" onclick="showTextAndHideContent('web')">
             <!-- LISTA WEB -->
-            <div class="web" style="display: none;">
-                <li><a href="index.html"><b><h2>Yugioh - JS</h2></b></a></li>
-                <li><a href="index.html"><b><h2>Detona Ralph - JS,CSS,HTML</h2></b></a></li>
-                <li><a href="index.html"><b><h2>Simulador de Piano - JS,CSS,HTML</h2></b></a></li>
-                <li><a href="index.html"><b><h2>Jogo da memória - JS,CSS,HTML</h2></b></a></li>
-                <li><a href="index.html"><b><h2>Audiobook Dom Casmurro - JS,CSS,HTML</h2></b></a></li>
+            <div class="web projects" style="display: none;">
+
+                <li><a id="web1" href="yugioh.html" target="_blank"><b><h2>•Yugioh - JS,CSS,HTML</h2></b></a></li>
+                <li><a id="web2" href="ralph.html" target="_blank"><b><h2>•Detona Ralph - JS,CSS,HTML</h2></b></a></li>
+                <li><a id="web3" href="piano.html" target="_blank"><b><h2>•Simulador de Piano - JS,CSS,HTML</h2></b></a></li>
+                <li><a id="web4" href="memoria.html" target="_blank"><b><h2>•Jogo da memória - JS,CSS,HTML</h2></b></a></li>
+                <li><a id="web5" href="webplayer.html" target="_blank"><b><h2>•Audiobook Dom Casmurro - JS,CSS,HTML</h2></b></a></li>
+
             </div>
 
         </div>
     </div>
 </div>
-
 <script>
     function showTextAndHideContent(textId) {
         var content = document.getElementById("content");
@@ -101,7 +102,7 @@
         startbtn.style.display = "block";
     }
 
-function showContent() {
+    function showContent() {
     var content = document.getElementById("content");
     content.style.display = "block";
 
@@ -111,16 +112,17 @@ function showContent() {
     // Exibe todas as imagens novamente
     var images = document.querySelectorAll('#content img');
     images.forEach(function (image) {
-        image.style.display = "inline"; // Alterado para "inline" para exibir as imagens
+        image.style.display = "inline"; 
     });
 
-    // Oculta todas as divs ao mostrar o conteúdo novamente
-    var divs = document.querySelectorAll('#content div');
-    divs.forEach(function (div) {
+    // Oculta apenas as divs com a classe "projects"
+    var projectsDivs = document.querySelectorAll('#content .projects');
+    projectsDivs.forEach(function (div) {
         div.style.display = "none";
     });
-}
+    }
 
+    
 </script>
     
 
