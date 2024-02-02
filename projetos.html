@@ -88,23 +88,26 @@
     </div>
 </div>
 <script>
-    function showTextAndHideContent(textId) {
-        var content = document.getElementById("content");
-        content.style.display = "";
+function showTextAndHideContent(textId) {
+    var content = document.getElementById("content");
+    content.style.display = "";
 
-        // Oculta todas as imagens
-        var images = document.querySelectorAll('#content img');
-        images.forEach(function (image) {
+    // Oculta as imagens específicas
+    var imagesToHide = ['imgmult', 'imgmobile', 'imgdesktop', 'imgweb'];
+    imagesToHide.forEach(function (imageId) {
+        var image = document.getElementById(imageId);
+        if (image) {
             image.style.display = "none";
-        });
+        }
+    });
 
-        // Exibe a div associada à imagem clicada
-        var textElement = document.querySelector('#content .' + textId);
-        textElement.style.display = "";
+    // Exibe a div associada à imagem clicada
+    var textElement = document.querySelector('#content .' + textId);
+    textElement.style.display = "";
 
-        var startbtn = document.getElementById("startbtn");
-        startbtn.style.display = "block";
-    }
+    var startbtn = document.getElementById("startbtn");
+    startbtn.style.display = "block";
+}
 
     function showContent() {
     var content = document.getElementById("content");
