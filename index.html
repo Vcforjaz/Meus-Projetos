@@ -10,8 +10,15 @@
     <title>Portfólio - Victor Forjaz</title>
 </head>
 <body>
-
-
+<!-- MSG NO TOPO, 13 SEGUNDOS -->
+<div id="mensagem">
+        Bem-vindo ao meu site!
+    <br>
+        <p>Hoje 23/02/24 estou iniciando uma especialiazação em diversas áreas e linguagens</p>
+        <br>
+        <p>Rumo ao FULL STACK 🚀, volto em Junho com novidades.</p>
+    </div>
+<!-- FIM DA MSG -->
     <div class="background">
        
         <header>
@@ -56,6 +63,16 @@
 
     <script type="script.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- JS da msg -->
+    <script>
+        window.onload = function() {
+            document.getElementById('mensagem').style.display = 'block';
+        }
 
+        setTimeout(function() {
+            document.getElementById('mensagem').style.display = 'none';
+        }, 13000); // 20 segundos em milissegundos
+    </script>
+    <!-- FIM JS MSG -->
 </body>
 </html>
