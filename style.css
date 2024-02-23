@@ -2,7 +2,13 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
 
-
+  #mensagem {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
 *{
   margin: 0;
   padding: 0;
