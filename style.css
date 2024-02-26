@@ -9,6 +9,7 @@
     border: 1px solid #ccc;
     text-align: center;
 }
+
 *{
   margin: 0;
   padding: 0;
@@ -139,6 +140,16 @@ header{
   width: 250px;
   height: 250px;
 }
+#DESEN-JOGOS{  
+  width: 450px;
+  height: 350px;
+}
+.certificados{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+}
 #Desktop{  
   width: 250px;
   height: 250px;  
@@ -157,6 +168,7 @@ header{
   height: 100%;
   background-color: rgba(255, 255, 255, 0.337);
 }
+#textoDESEN-JOGOS{color:yellow}
 #desktop1{color: yellow;}
 #desktop2{color: rgb(5, 250, 254);}
 #desktop3{color: yellow;}
@@ -168,7 +180,7 @@ header{
 #mult4{color: rgb(5, 250, 254);}
 #mult5{color: yellow;}
 #mobile1{color: yellow;}
-#githubemobile1{color: aquamarine;}
+#githubemobile1{color: aquamarine ;}
 #mobile2{color: rgb(5, 250, 254);}
 #mobile3{color: yellow;}
 #mobile4{color: rgb(5, 250, 254);}
